@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+   <block>
+      <img>IMG/About/about1.svg</img>
+      <title>Правила перевозок</title>
+      <src>HTML/rules.html</src>
+   </block>
+   <block>
+      <img>IMG/About/about2.svg</img>
+      <title>Гарантия</title>
+      <src>HTML/guarantees.html</src>
+   </block>
+   <block>
+      <img>IMG/About/about3.svg</img>
+      <title>Партнёры</title>
+      <src>HTML/partners.html</src>
+   </block>
+</root>
+
+
+
+
+
+
+
+
+      

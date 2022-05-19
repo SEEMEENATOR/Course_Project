@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    />
+    <link rel="icon" type="image/png" sizes="16x16" href="../IMG/logo.svg" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/about_country.css" />
+    <title>OpenSkies</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="wrapper">
+        <div class="logo">
+          <a href="../index.html">
+            <img src="../IMG/logo.svg" alt="OpenSkiesLogo" />
+          </a>
+        </div>
+        <a href="../HTML/register.html" class="btn_online">
+          <span class="hidden">онлайн-</span>регистрация</a
+        >
+        <div class="header_contancts">
+          <p class="phone">8(029)7292215 внутренние рейсы</p>
+          <div class="line"></div>
+          <p class="phone">8(029)7254495 международные рейсы</p>
+        </div>
+        <div class="burger">
+          <div class="container" id="burger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </div>
+      </div>
+      <div class="photo">
+        <img src="../IMG/plain.svg" alt="plane" />
+      </div>
+      <nav class="nav">
+        <div class="wrapper">
+          <ul class="list_items">
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="../index.html">Куда поехать</a></li>
+            <li><a href="../index.html">О нас</a></li>
+            <li><a href="../HTML/rules.html">Дополнительные услуги</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <hr />
+    <section class="img">
+      <div class="wrapper">
+        <div class="slider">
+          <div class="container">
+            <div class="slides"></div>
+            <div class="slide-controls">
+              <button id="prev-btn">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button id="next-btn">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="imgs"></div>
+        <div class="text">
+          <p class="title_text"></p>
+          <p class="text_des_les"></p>
+          <p class="description"></p>
+        </div>
+      </div>
+    </section>
+    <div class="img_osnova"></div>
+    <footer class="footer">
+      <div class="wrapper">
+        <ul class="ul_items">
+          <li><a href="../index.html">Главная</a></li>
+          <li><a href="../index.html" >Куда поехать</a></li>
+          <li><a href="../index.html">О нас</a></li>
+          <li><a href="rules.html">Дополнительные услуги</a></li>
+          <li class="mobile_response">
+            8(029)7292215 <br />
+            внутренние рейсы
+            <div class="line"></div>
+          </li>
+          <li>© 2022, ООО «OpenSkies»</li>
+        </ul>
+        <div class="additional">
+          <p class="title_add">Справочная информация</p>
+          <div class="footer_contancts">
+            <p class="phone">8(029)7292215 внутренние рейсы</p>
+            <div class="line"></div>
+            <p class="phone">8(029)7254495 международные рейсы</p>
+          </div>
+          <p class="adress">support@Maksimair.ru</p>
+        </div>
+        <div class="icons">
+          <div class="icon">
+            <div class="imgs_icons hidden_logo">
+              <a
+                href="https://console.firebase.google.com/u/0/project/chat-a3c69/authentication/users"
+              >
+                <img src="../IMG/icon/Twitter.svg" alt="Twitter"
+              /></a>
+            </div>
+            <div class="imgs_icons">
+              <a href="https://www.instagram.com/">
+                <img src="../IMG/icon/Instagram.svg" alt="Instagram" />
+              </a>
+            </div>
+            <div class="imgs_icons hidden_logo">
+              <a href="https://www.viber.com/ru/">
+                <img src="../IMG/icon/Viber.svg" alt="Viber" />
+              </a>
+            </div>
+            <div class="imgs_icons">
+              <a href="https://vk.com/feed">
+                <img src="../IMG/icon/VK.svg" alt="VK" />
+              </a>
+            </div>
+            <div class="imgs_icons hidden_logo">
+              <a href="https://telegram.im">
+                <img src="../IMG/icon/Telegram.svg" alt="Telegram" />
+              </a>
+            </div>
+            <div class="imgs_icons">
+              <a href="https://ok.ru/">
+                <img src="../IMG/icon/Ok.svg" alt="OK" />
+              </a>
+            </div>
+            <div class="imgs_icons hidden_logo">
+              <a href="https://www.linkedin.com/">
+                <img src="../IMG/icon/LinkedIn.svg" alt="LinkedIn" />
+              </a>
+            </div>
+            <div class="imgs_icons">
+              <a href="https://www.facebook.com/">
+                <img src="../IMG/icon/Facebook.svg" alt="Facebook" />
+              </a>
+            </div>
+            <div class="imgs_icons hidden_logo">
+              <a href="https://mail.google.com/"
+                ><img src="../IMG/icon/Mail.svg" alt="Mail" />
+              </a>
+            </div>
+          </div>
+          <p class="phone_img">8(029)7254495 международные рейсы</p>
+        </div>
+      </div>
+    </footer>
+    <script src="../JS/main.js"></script>
+    <script src="../JS/Country.js"></script>
+    <script>
+      var params = new URLSearchParams(document.location.search); // параметры из url
+      var i = params.get("id"); // получаем параметр id
+      document.title = Country[i].name; // заголовок страницы
+      document.querySelector(".title_text").innerHTML = Country[i].title_text;
+      document.querySelector(".text_des_les").innerHTML =
+        Country[i].text_des_les;
+      document.querySelector(".description").innerHTML = Country[i].description;
+      document.querySelector(
+        ".img_osnova"
+      ).innerHTML = `<img src="${Country[i].imgMain.img}" alt="${Country[i].imgMain.alt}">`;
+
+      for (let k = 0; k < Country[i].imgs.length; k++) {
+        // выводим картинки
+        document.querySelector(
+          ".imgs"
+        ).innerHTML += `<img src="${Country[i].imgs[k].img}" alt="${Country[i].imgs[k].alt}">`; // выводим картинки
+      }
+      for (let k = 0; k < Country[i].imgs.length; k++) {
+        document.querySelector(".slides").innerHTML += `<div class="slide"> 
+           <img src="${Country[i].imgs[k].img}" alt="${Country[i].imgs[k].alt}">;
+          </div>`;
+      }
+      querySelector(
+        ".img_osnova"
+      ).innerHTML = `<img src="${Country[i].imgMain.img}" alt="${Country[i].imgMain.alt}">`;
+    </script>
+    <script src="../JS/SliderCountry.js"></script>
+  </body>
+</html>
